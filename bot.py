@@ -34,7 +34,7 @@ async def start_handler(message: Message):
 async def link_handler(message: Message):
     original_url = message.text.strip()
 
-    target_platforms = ["spotify", "appleMusic", "youtube", "deezer", "soundcloud"]  # убрал пока yandex
+    target_platforms = ["spotify", "appleMusic", "youtube", "deezer", "soundcloud", "yandexmusic"]
     responses = []
 
     for platform in target_platforms:
