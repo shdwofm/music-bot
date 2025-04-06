@@ -5,7 +5,9 @@ from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.default import DefaultBotProperties
 from aiogram.filters import Command
-from config import BOT_TOKEN
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("Переменная окружения BOT_TOKEN не установлена")
 from link_converter import get_alt_link
 
 # Настройка логирования
